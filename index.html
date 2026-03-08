@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bhutki Meme</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f2f2f2;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.container{
+text-align:center;
+}
+
+h1{
+font-weight:600;
+}
+
+img{
+width:260px;
+margin-bottom:20px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+margin:10px;
+font-family:'Poppins',sans-serif;
+font-weight:600;
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.ok{
+background:#4CAF50;
+color:white;
+}
+
+.no{
+background:#ff4d4d;
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div class="container" id="page1">
+
+<img src="cat.png">
+
+<h1>Chal Bhutki, Photo Bhej 😏</h1>
+
+<button class="ok" onclick="finalPage()">Ok</button>
+<button class="no" onclick="page2()">Noi</button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="container" id="page2" style="display:none">
+
+<img src="monkey.png">
+
+<h1>Please Bhutki 🥺</h1>
+
+<button class="ok" onclick="page3()">Thik hai</button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="container" id="page3" style="display:none">
+
+<h1>Pakka na? 😏</h1>
+
+<button class="ok" onclick="finalPage()">Haa re</button>
+
+</div>
+
+
+<!-- FINAL PAGE -->
+
+<div class="container" id="final" style="display:none">
+
+<img src="emoji.png">
+
+<h1>Abhishek bhot khush hua 😎</h1>
+
+</div>
+
+
+<script>
+
+function page2(){
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
+}
+
+function page3(){
+document.getElementById("page2").style.display="none";
+document.getElementById("page3").style.display="block";
+}
+
+function finalPage(){
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="none";
+document.getElementById("page3").style.display="none";
+document.getElementById("final").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
